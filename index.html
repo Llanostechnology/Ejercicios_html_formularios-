@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document
+    </title>
+</head>
+<body>
+    <!-- formulario de la pagina -->
+    <section>
+        <!-- formulario que envia a cuestionario.py -->
+        <!--metodo get envia información visible por el usuario-->
+        <!--atributo action es la url donde se va a procesar la información de lo que queremos-->
+        <form action="cuestionario"
+            method="get" 
+            action="cuestionario.py">
+        </form>
+        <label for="Usuario">Usuario</label>
+        <input type="text" name="usuario">
+
+        <label for="password">Contraseña:</label>
+        <input type="password" value="password" name="password">
+        <input type="hidden" name="oculto" value="oculto">
+
+        <label for="Pais">Pais</label>
+        <input type="radio" name="opciones" value="mx" checked> México
+        <input type="radio" name="opciones" value="es" checked> España
+        <input type="radio" name="opciones" value="ar" checked> Argentina   
+        <label>Check</label>
+        <input type="checkbox" name="check1" value="si" checked> Acepto términos y condiciones
+        <input type="submit" value="Enviar">
+       
+        <br/>
+    </section>
+      <section>
+        <!-- formulario que envia a cuestionario.py -->
+        <!--metodo post envia información no visible por el usuario-->
+        <!--atributo action es la url donde se va a procesar la información de lo que queremos-->
+        <form action="cuestionario2"
+            method="post" 
+            action="cuestionario.py">
+            <label for=""> Ejemplo textarea</label>
+            <textarea name="areadetexto" rows="6" cols="25" id=""></textarea>
+              <br/>
+              <label for="">Opciones</label>
+                <select name="opciones">
+                    <!-- Las opciones del select -->
+                  
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                </select>
+
+                <br/>
+                <input type="submit" value="Enviar">
+                <input type="color" name="color">
+                <input type="date" name="fecha">
+                <input type="datatime" name="fechaCompleta">
+                <input type="datetime-local" name="fechayhora">
+                <input type="email" name="correo">
+                <input type="number" name="numero">
+                <input type="range" name="rango" min="0" max="10">
+                <input type="tel" name="telefono">
+                <input type="url" name="paginaWeb">
+                <input type="search" name="busqueda">
+                <input type="week" name="semana">
+        </form>
+    </section>
+    <!--atributo target, este atributo no es de los elementos pero si hay que implementarlos en algunos casos ya que nos permite indicar dónde vamos a mostrar la respuesta de lo que se recibe:
+    _self: en la misma ventana o pestaña
+    _blank: en una nueva ventana o pestaña
+    _parent: en el marco padre
+    _top: en toda la ventana
+    -->
+    <!-- Elemento <input>: este es el que permite introducir datos al formulario para después procesarlos, este elemento cuanta con un atributo que es "type"
+     valor "text": se coloca cuando esperamos recicbir un texto
+     valor "password": se coloca cuando esperamos recibir una contraseña
+     valor "radio": se coloca cuando nos interesa colocar un boton de tipo radio
+     valor "checkbox":se coloca para genear una casilla de selección junto con el atributo "value" en caso de no colocarlo se envia el valor "on" indicamdo que ya esta seleccioada
+     valor "button": se coloca para generar un boton que no tiene ninguna función por defecto
+     valor "submit": se coloca para generar un boton de envio del formulario
+     valor "reset": se coloca para generar un boton que resetea el formulario
+     valor "hidden": se coloca para enviar información oculta al usuario
+     valor "file": se coloca para permitir al usuario subir un archivo
+     valor "date": se coloca para permitir al usuario seleccionar una fecha
+     valor "email": se coloca para permitir al usuario ingresar un correo electrónico
+     valor "number": se coloca para permitir al usuario ingresar un número
+     valor "tel": se coloca para permitir al usuario ingresar un número de teléfono
+     valor "url": se coloca para permitir al usuario ingresar una URL
+     valor "color": se coloca para permitir al usuario seleccionar un color
+     valor "range": se coloca para permitir al usuario seleccionar un valor dentro de un rango mediante un control deslizante
+     valor "time": se coloca para permitir al usuario seleccionar una hora
+     valor "week": se coloca para permitir al usuario seleccionar una semana del año 
+     valor "month": se coloca para permitir al usuario seleccionar un mes y año 
+     valor "search": se coloca para permitir al usuario ingresar un término de búsqueda
+     valor "datetime-local": se coloca para permitir al usuario seleccionar una fecha y hora local
+     valor "image": se coloca para permitir al usuario enviar el formulario mediante una imagen que actúa como botón de envío
+    -->
+
+    
+    <!-- Elemento <textarea>: este elemento permite crear un área de texto más grande para que el usuario pueda ingresar información extensa, como comentarios o descripciones. A diferencia del elemento <input> con type="text", <textarea> puede abarcar múltiples líneas y es más adecuado para entradas largas. -->
+    <!-- Elemento <select> y <option>: el elemento <select> se utiliza para crear un menú desplegable que permite al usuario seleccionar una opción de una lista predefinida. Dentro del elemento <select>, se utilizan elementos <option> para definir cada una de las opciones disponibles en el menú desplegable. -->
+    <!-- Elemento <label>: este elemento se utiliza para definir etiquetas para los elementos de formulario como <input>, <textarea> y <select>. Al asociar un <label> con un elemento de formulario mediante el atributo "for", se mejora la accesibilidad y usabilidad del formulario, ya que al hacer clic en la etiqueta, se activa el elemento asociado. -->
+    <!-- Elemento <fieldset> y <legend>: el elemento <fieldset> se utiliza para agrupar elementos relacionados dentro de un formulario, creando una sección visualmente distinta. El elemento <legend> se utiliza dentro de <fieldset> para proporcionar un título o descripción para el grupo de elementos, mejorando la organización y comprensión del formulario. -->
+    <!-- Elemento <button>: este elemento se utiliza para crear botones interactivos dentro de un   formulario. A diferencia del elemento <input> con type="submit" o type="reset", el elemento <button> permite incluir contenido HTML adicional, como texto o imágenes, dentro del botón. Esto proporciona mayor flexibilidad en el diseño y funcionalidad de los botones en los formularios. -->
+    <!-- pie de pagina  
+    -->
+        <br/>
+        <br/>        
+
+    <section>
+        <form action="cuestionario3"
+        method="post"
+        action="cuestionario.py">
+        <label for="ejemplo tarea">Ejemplo tarea</label>
+        <textarea name="areadetexto" rows="6" cols="25"></textarea>
+        <br/>
+        <label for="">Opciones:</label>
+        <select name="opciones">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+        <br/>
+        <input type="submit" value="Enviar">
+    </form>
+    <input type="search" name="busqueda" autocomplete="off" placeholder="Buscar..."autofocus>
+    </section>
+
+     <section>
+        <form action="cuestionario3"
+        method="post"
+        action="cuestionario.py">
+        <label for="ejemplo tarea">Ejemplo tarea</label>
+        <textarea name="areadetexto" rows="6" cols="25"></textarea>
+        <br/>
+        <label for="">Opciones:</label>
+        <select name="opciones">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+        <br/>
+        <input type="submit" value="Enviar" formnovalidate>
+        <input type="email" name="correos" multiple>
+    </form>
+    <input type="search" name="busqueda" placeholder="Buscar...">
+    </section>
+       <br>
+     <section>
+        <form action="cuestionario3"
+        method="post"
+        action="cuestionario.py">
+        <label for="ejemplo tarea">Ejemplo tarea</label>
+        <input type="text" name="areadetexto" pattern="[A-Za-z]{2}">
+        <input type="search" name="buscar" placeholder="Buscar...">
+        <input type="text" name="nombre" required>
+        <br/>
+        <input type="submit" value="Enviar">
+    </form>
+    </section>
+    <footer>
+        <p>Pie de página de la página web</p>
+    </footer>
+</body>
+</html>
